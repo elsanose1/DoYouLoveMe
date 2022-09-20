@@ -13,10 +13,9 @@ buttons.forEach(button => {
     button.addEventListener("click" , e=>{
        let value = button.innerText 
        if(value === "Yes"){
-        document.getElementById("results").classList.toggle("hidden")
-        setTimeout(() => {
-        document.getElementById("results").classList.toggle("hidden")
-        }, 5000);
+        if( document.getElementById("results").classList.contains('hidden')){
+            document.getElementById("results").classList.toggle("hidden")
+           }
        }
     })
 });
